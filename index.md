@@ -2,7 +2,7 @@ layout: default
 title: Home
 ---
 
-# Hi — I'm Your Name
+# Hi — I'm Damone Washington
 
 A Computer Science student at Winston Salem State University. I build web apps, automation tools, and explore algorithms.
 
