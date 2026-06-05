@@ -1,8 +1,8 @@
-title: "Your Name — Portfolio"
-email: "you@example.com"
+title: "Damone Washington — Portfolio"
+email: "dwashington124@rams.wssu.edu"
 description: "Portfolio of a Computer Science student at Winston Salem State University"
 baseurl: ""
-url: "https://your-github-username.github.io"
+url: "https://Damone-Washington19.github.io"
 theme: minima
 collections:
   projects:
