@@ -1,0 +1,9 @@
+title: "Your Name — Portfolio"
+email: "you@example.com"
+description: "Portfolio of a Computer Science student at Winston Salem State University"
+baseurl: ""
+url: "https://your-github-username.github.io"
+theme: minima
+collections:
+  projects:
+    output: true
