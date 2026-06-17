@@ -1,7 +1,7 @@
 layout: default
 title: Home
 ---
-<img src="_MG_8539-1.jpeg" style = "width: 80%">
+<img src="_MG_8539-1.jpeg" style = "width: 20%">
 ## Hi I'm Damone Washington
 
 A Computer Science student at Winston Salem State University. I build web apps, automation tools, and explore algorithms.
