@@ -4,11 +4,11 @@
 #baseurl: ""
 #url: "https://Damone-Washington19.github.io"
 #theme: minimal-mistakes-jekyll
-#collections:
- # projects:
-  #  output: true
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+collections:
+  projects:
+    output: true
+theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
