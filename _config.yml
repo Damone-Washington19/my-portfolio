@@ -3,7 +3,7 @@ email: "dwashington124@rams.wssu.edu"
 description: "Portfolio of a Computer Science student at Winston Salem State University"
 baseurl: ""
 url: "https://Damone-Washington19.github.io"
-theme: minima
+theme: minimal-mistakes-jekyll
 collections:
   projects:
     output: true
