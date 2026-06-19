@@ -1,9 +1,10 @@
 title: "Damone Washington — Portfolio"
 email: "dwashington124@rams.wssu.edu"
-description: "Portfolio of a Computer Science student at Winston Salem State University"
+description: "AI Researcher &amp; Software Developer · NC-LSAMP Student Researcher · WSSU Class of 2027"
 baseurl: ""
 url: "https://Damone-Washington19.github.io"
-theme: minima
+theme: jekyll-theme-tactile
 collections:
   projects:
     output: true
+
