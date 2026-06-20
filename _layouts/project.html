@@ -1,20 +1,30 @@
 ---
 layout: default
 ---
-<article class="project">
+
+<article class="project-page">
   <header class="project-header">
     <h1>{{ page.title }}</h1>
+    {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}" class="project-date">{{ page.date | date: "%B %d, %Y" }}</time>{% endif %}
     {% if page.tech %}
-    <ul class="tech-list">
-      {% for item in page.tech %}<li>{{ item }}</li>{% endfor %}
-    </ul>
+      <div class="project-tech-tags">
+        {% for tech in page.tech %}
+          <span class="tech-tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
     {% endif %}
-    <div class="project-links">
-      {% if page.repo %}<a href="{{ page.repo }}" target="_blank" rel="noopener">View Code</a>{% endif %}
-      {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener">Live Demo</a>{% endif %}
-    </div>
   </header>
-  <div class="project-body">
+
+  <main class="project-content">
     {{ content }}
-  </div>
+  </main>
+
+  {% if page.repo or page.demo %}
+    <footer class="project-footer">
+      <div class="project-links">
+        {% if page.repo %}<a href="{{ page.repo }}" target="_blank" rel="noopener" class="project-link">View Code →</a>{% endif %}
+        {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener" class="project-link">Live Demo →</a>{% endif %}
+      </div>
+    </footer>
+  {% endif %}
 </article>
