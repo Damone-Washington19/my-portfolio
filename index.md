@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="hero">
-  <img src="{{ '/assets/images/MG_8539.jpeg' | relative_url }}" alt="Damone Washington" class="hero-photo">
+  <img src="{{ 'assets/images/MG_8539.jpeg' | relative_url }}" alt="Damone Washington" class="hero-photo">
   <div class="hero-text">
     <h2>AI Researcher &amp; Software Developer</h2>
     <p class="hero-tagline">Rising Senior · Winston-Salem State University · NC-LSAMP Student Researcher · Google AI Certified</p>
