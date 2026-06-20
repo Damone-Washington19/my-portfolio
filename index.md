@@ -8,7 +8,7 @@ title: Home
   <div class="hero-text">
     <h2>AI Researcher &amp; Software Developer</h2>
     <p class="hero-tagline">Rising Senior · Winston-Salem State University · NC-LSAMP Student Researcher · Google AI Certified</p>
-    <p>I build intelligent systems and data-driven tools — from knowledge graphs and web crawlers to AI-powered applications. I'm driven by curiosity and committed to writing software that solves real problems.</p>
+    <p>I build intelligent systems and data-driven tools — from knowledge graphs and web crawlers to AI-powered applications. I'm driven by curiosity and committed to writing software that solves real-world problems.</p>
     <div class="hero-cta">
       <a href="#projects" class="cta-btn">View Projects</a>
       <a href="#contact" class="cta-btn cta-btn--outline">Contact Me</a>
