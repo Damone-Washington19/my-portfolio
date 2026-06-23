@@ -1,7 +1,0 @@
-/_site
-.sass-cache
-.bundle
-/.jekyll-cache
-*.gem
-Gemfile.lock
-.DS_Store
