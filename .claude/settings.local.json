@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/jeaimehp/Desktop/my-portfolio mv MG_8539-1.jpeg assets/images/MG_8539-1.jpeg)",
+      "Bash(git -C /Users/jeaimehp/Desktop/my-portfolio mv MG_8539.jpeg assets/images/MG_8539.jpeg)",
+      "Bash(git -C /Users/jeaimehp/Desktop/my-portfolio rm -r --cached _site/)",
+      "Bash(git -C /Users/jeaimehp/Desktop/my-portfolio ls-files --cached _site/)",
+      "Bash(find /Users/jeaimehp -name \"Profile*.pdf\" -not -path \"*/Library/*\" 2>/dev/null)",
+      "Read(//Users/jeaimehp/**)",
+      "Bash(git -C /Users/jeaimehp/Desktop/my-portfolio mv Damone_Washington.pdf resume.pdf)",
+      "Bash(bundle install *)",
+      "Bash(bundle exec *)",
+      "Bash(find /Library/Ruby/Gems/2.6.0/gems/jekyll-theme-tactile-0.2.0 -name \"*.css\" -o -name \"*.scss\" 2>/dev/null)",
+      "Read(//Library/Ruby/Gems/2.6.0/gems/jekyll-theme-tactile-0.2.0/**)"
+    ]
+  }
+}
