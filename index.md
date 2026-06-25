@@ -4,11 +4,11 @@ title: Home
 ---
 
 <div class="hero">
-  <img src= assets/images/MG_8539.jpeg style = "width: 20%" alt="Damone Washington" class="hero-photo">
+  <img src="{{ '/assets/images/MG_8539.jpeg' | relative_url }}" alt="Damone Washington" class="hero-photo">
   <div class="hero-text">
     <h2>AI Researcher &amp; Software Developer</h2>
-    <p class="hero-tagline">Rising Senior · Winston-Salem State University · NC-LSAMP Student Researcher · Google AI Certified</p>
-    <p>I build intelligent systems and data-driven tools — from knowledge graphs and web crawlers to AI-powered applications. I'm driven by curiosity and committed to writing software that solves real-world problems.</p>
+    <p class="hero-tagline">Rising Senior - Winston-Salem State University - NC-LSAMP Student Researcher - Google AI Certified</p>
+    <p>I build intelligent systems and data-driven tools - from knowledge graphs and web crawlers to AI-powered applications. I'm driven by curiosity and committed to writing software that solves real problems.</p>
     <div class="hero-cta">
       <a href="#projects" class="cta-btn">View Projects</a>
       <a href="#contact" class="cta-btn cta-btn--outline">Contact Me</a>
@@ -63,12 +63,14 @@ title: Home
 ## Projects
 
 <div class="project-grid">
-{% for project in site.projects %}
+{% assign projects = site.projects | sort: "date" | reverse %}
+{% for project in projects %}
   <div class="project-card">
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
     {% if project.tech %}<p class="project-tech">{{ project.tech | join: " &middot; " }}</p>{% endif %}
     <p>{{ project.content | strip_html | truncatewords: 30 }}</p>
     <div class="project-links">
+      <a href="{{ project.url | relative_url }}">Read More &rarr;</a>
       {% if project.repo %}<a href="{{ project.repo }}" target="_blank" rel="noopener">Code &rarr;</a>{% endif %}
       {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">Live Demo &rarr;</a>{% endif %}
     </div>
