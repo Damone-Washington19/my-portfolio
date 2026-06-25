@@ -1,10 +1,13 @@
 <header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/projects/">Projects</a>
-    <a href="/Damone_Washington.pdf">Resume</a>
-    <a href="https://github.com/Damone-Washington19" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/damone-washington-548765325/" target="_blank" rel="noopener">LinkedIn</a>
-  </nav>
+  <h1>{{ site.title }}</h1>
+  <h2>{{ site.description }}</h2>
 </header>
+
+<section id="downloads" class="clearfix site-nav" aria-label="Primary navigation">
+  <a href="{{ '/' | relative_url }}" class="button"><span>Home</span></a>
+  <a href="{{ '/about.html' | relative_url }}" class="button"><span>About</span></a>
+  <a href="{{ '/projects/' | relative_url }}" class="button"><span>Projects</span></a>
+  <a href="{{ '/Damone_Washington.pdf' | relative_url }}" class="button"><span>Resume</span></a>
+  <a href="https://github.com/Damone-Washington19" class="button" target="_blank" rel="noopener"><span>GitHub</span></a>
+  <a href="https://www.linkedin.com/in/damone-washington-548765325/" class="button" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+</section>

@@ -4,7 +4,9 @@ description: "AI Researcher &amp; Software Developer · NC-LSAMP Student Researc
 baseurl: ""
 url: "https://Damone-Washington19.github.io"
 theme: jekyll-theme-tactile
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 collections:
   projects:
     output: true
-

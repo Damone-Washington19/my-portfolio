@@ -9,6 +9,16 @@ header nav a { color:#fff; margin-right:1rem; text-decoration:none }
 main { padding:2rem; max-width:900px; margin:0 auto }
 footer { text-align:center; padding:2rem 0; color:#666 }
 
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.site-nav .button {
+  float: none;
+  margin: 0;
+}
+
 /* ── Hero ── */
 .hero {
   display: flex;
@@ -108,7 +118,7 @@ footer { text-align:center; padding:2rem 0; color:#666 }
   margin: 0 0 0.75rem;
 }
 .project-card p { font-size: 0.9rem; color: #444; flex-grow: 1; margin-bottom: 1rem; }
-.project-links { display: flex; gap: 1rem; margin-top: auto; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: auto; }
 .project-links a { font-size: 0.85rem; color: #0a2540; font-weight: 600; text-decoration: none; }
 .project-links a:hover { text-decoration: underline; }
 

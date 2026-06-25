@@ -1,47 +1,35 @@
-Project: My Portfolio (Jekyll / GitHub Pages)
-Date: 2026-06-20
+Project: Damone Washington Portfolio (Jekyll / GitHub Pages)
+Date: 2026-06-25
 
 Purpose
 -------
-This document summarizes the repository structure, important Jekyll configuration, current status, and quick restart instructions so this chat session (or another assistant) can resume work quickly.
+This document summarizes the current repository structure, Jekyll configuration, layout system, and restart instructions for future portfolio development.
 
-Repository Info
----------------
-- **Repo:** Damone-Washington19/my-portfolio
-- **Primary Language:** Jupyter Notebook (89.1%)
-- **Other Languages:** HTML (6.2%), CSS (3.7%), Other (1%)
-- **Type:** Jekyll-based portfolio + AI/ML projects
+Current Site Architecture
+-------------------------
+- `_config.yml` - Jekyll config using `theme: jekyll-theme-tactile`, explicit SEO/sitemap plugins, and the `projects` collection.
+- `index.md` - Main landing page with valid front matter, hero section, skills grid, featured projects, and contact section.
+- `about.md` - About page with education, research, coursework, and internship goals.
+- `projects.md` - Projects index page available at `/projects/`.
+- `_projects/` - Project collection items using `layout: project`.
+- `_layouts/default.html` - Main Tactile-compatible site shell. It keeps the Tactile container/header/content structure and delegates shared header/footer markup to includes.
+- `_layouts/project.html` - Individual project page layout.
+- `_includes/header.html` - Shared site title, description, and primary navigation buttons.
+- `_includes/footer.html` - Shared footer.
+- `assets/css/styles.scss` - Custom CSS overrides layered on top of the Tactile theme stylesheet.
+- `assets/js/main.js` - Reserved for future interaction scripts.
+- `assets/images/` - Profile images used by the homepage.
+- `.github/workflows/deploy.yml` - GitHub Pages build and deploy workflow.
+- `_site/` - Generated site output. It is ignored by git and should not be edited directly.
 
-Top-level tree (important files and folders)
--------------------------------------------
-- `_config.yml` — Jekyll config (site title, `url`, `theme: minima`, `collections: projects`).
-- `index.md` — Home page (front matter is correct ✅).
-- `_layouts/defaults.html` — Primary layout used by pages; includes header/footer and links CSS/JS.
-- `_layouts/project.html` — Individual project page layout (CREATED ✅).
-- `_includes/header.html` — Site header / navigation.
-- `_includes/footer.html` — Footer.
-- `_projects/` — Collection of project markdown files:
-  - `mcu-knowledge-graph.md` — MCU relationship graph project
-  - `scientific-knowledge-graph.md` — Scientific knowledge graph project
-- `assets/css/styles.scss` — Source SASS/CSS.
-- `assets/js/main.js` — Site JS.
-- `_site/` — Generated site output (not committed, in .gitignore ✅).
+Portfolio Content Focus
+-----------------------
+- Target roles: software engineering internships, entry-level full-stack web development, and data operations.
+- Core areas: data structures, AI/ML system security, backend utility automation, REST API integrations, graph theory, NLP, semantic embeddings, and computer vision security.
+- Highlighted work: MCU knowledge graph tooling, scientific concept knowledge graph visualization, and adversarial AI defense research.
 
-Current Status (Updated 2026-06-20)
------------------------------------
-✅ **FIXED:**
-- `index.md` front matter is correct (has opening `---`)
-- `_layouts/project.html` created and configured
-- `_site/` added to `.gitignore` (along with `Gemfile.lock` and `.DS_Store`)
-- Stylesheet paths use correct Liquid syntax: `{{ '/assets/css/styles.css' | relative_url }}`
-
-✅ **VERIFIED:**
-- Project collection files properly use `layout: project`
-- Images referenced correctly with `{{ '/assets/images/NAME' | relative_url }}`
-- All Jekyll configuration is valid
-
-Quick local build commands
---------------------------
+Local Development
+-----------------
 Install dependencies:
 
 ```bash
@@ -54,34 +42,16 @@ Serve locally:
 bundle exec jekyll serve --livereload
 ```
 
-The site will be available at `http://localhost:4000`
+Build locally:
 
-Project Details
----------------
-**MCU Knowledge Graph** (`_projects/mcu-knowledge-graph.md`)
-- Multi-phase Python system mapping Marvel Cinematic Universe character relationships
-- Tech: Python, NetworkX, Matplotlib, BeautifulSoup, Wikipedia API, Requests
-- Phases: Web Crawler → Wikipedia Integration → Character Relationship Graph
+```bash
+bundle exec jekyll build
+```
 
-**Scientific Knowledge Graph** (`_projects/scientific-knowledge-graph.md`)
-- Similar knowledge graph architecture for scientific domain
-
-Files to check first when resuming
----------------------------------
-- [`_config.yml`](_config.yml) — verify `url`, `baseurl`, theme, and collections.
-- [`_layouts/defaults.html`](_layouts/defaults.html) — stylesheet link and includes.
-- [`_layouts/project.html`](_layouts/project.html) — project page layout (newly created).
-- [`_projects/` folder](_projects/) — all projects using `layout: project`.
-
-How to use this file to restart the chat
----------------------------------------
-1. Open this repository in the editor.
-2. Open this file: [`PROJECT_STRUCTURE.md`](PROJECT_STRUCTURE.md).
-3. In a new chat, paste this file's path and ask the assistant to "resume analysis from PROJECT_STRUCTURE.md" or ask specific questions about the portfolio.
-
-Next Steps
-----------
-- Test the site locally with `bundle exec jekyll serve --livereload`
-- Verify all project pages render correctly
-- Consider adding more projects to the `_projects/` collection
-- Optionally enhance styling in `assets/css/styles.scss`
+Notes
+-----
+- The `/projects/` route is backed by `projects.md`; individual project pages are generated from `_projects/`.
+- Keep navigation links in `_includes/header.html` so the layout stays maintainable.
+- Keep theme-level structure in `_layouts/default.html`; add portfolio-specific visual changes in `assets/css/styles.scss`.
+- The old misplaced workflow path `.github/-/workflows/deploy.yml` has been removed. GitHub recognizes workflows under `.github/workflows/`.
+- If local builds fail with a missing `github-pages` gem, run `bundle install` before serving or building.
