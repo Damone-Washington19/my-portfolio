@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "github-pages", "~> 231", group: :jekyll_plugins
 
 # If you prefer to use Jekyll directly without GitHub Pages compatibility:
-# gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.3"
 
 group :jekyll_plugins do
   # Essential Jekyll plugins
@@ -15,9 +15,9 @@ group :jekyll_plugins do
   gem "jekyll-gist", "~> 1.5"         # Embed gists
   
   # Optional plugins (uncomment as needed)
-  # gem "jekyll-paginate", "~> 1.1"   # Pagination support
-  # gem "jekyll-redirect-from", "~> 0.16" # Redirect support
-  # gem "jemoji", "~> 0.12"           # Emoji support
+  gem "jekyll-paginate", "~> 1.1"   # Pagination support
+  gem "jekyll-redirect-from", "~> 0.16" # Redirect support
+  gem "jemoji", "~> 0.12"           # Emoji support
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
