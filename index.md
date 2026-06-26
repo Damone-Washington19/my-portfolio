@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="hero">
-  <img src="assets/images/MG_8539.jpeg" alt="Damone Washington" class="hero-photo">
+  <img src="assets/images/MG_8539.jpeg" style="width:20%" alt="Damone Washington" class="hero-photo">
   <div class="hero-text">
     <h2>Computer Science Student Building AI, Data, and Web Tools</h2>
     <p class="hero-tagline">Winston-Salem State University - NC-LSAMP Student Researcher - Google AI Certified</p>
