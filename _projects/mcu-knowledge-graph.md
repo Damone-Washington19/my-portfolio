@@ -7,12 +7,14 @@ tech: [Python, NetworkX, Matplotlib, BeautifulSoup, Wikipedia API, Requests]
 repo: https://github.com/Damone-Washington19
 ---
 
-A multi-phase knowledge graph system built in Python that maps relationships between Marvel Cinematic Universe characters using real data from the Wikipedia API.
+A multi-phase Python knowledge graph system that maps relationships between Marvel Cinematic Universe characters using real data from the Wikipedia API. The project combines web traversal, API pagination, graph construction, and visualization into one data-driven workflow.
 
-**Phase 1 - Web Crawler:** Built a BFS-based web crawler using `requests` and `BeautifulSoup` that traverses websites starting from a seed URL, extracts cross-domain hyperlinks, and constructs a directed domain-level connection graph. Edge weights track link frequency between domains.
+**Phase 1 - Web Crawler:** Built a BFS-based crawler using `requests` and `BeautifulSoup` that starts from a seed URL, extracts cross-domain hyperlinks, and constructs a directed domain-level connection graph. Edge weights track link frequency so repeated connections become visible in the graph.
 
-**Phase 2 - Wikipedia Integration:** Integrated the Wikipedia API to programmatically query the MCU character category, retrieve up to 500 characters, and fetch each character's internal article links - all using paginated API requests to handle large result sets.
+**Phase 2 - Wikipedia Integration:** Integrated the Wikipedia API to query MCU character categories, retrieve up to 500 characters, and fetch each character's internal article links. The API layer handles paginated responses so the system can work with larger result sets instead of one-off manual data collection.
 
-**Phase 3 - Character Relationship Graph:** Combined both systems to build a full MCU character network. BFS traversal is constrained to a whitelist of known MCU characters, ensuring only meaningful connections are drawn. Nodes are scaled by degree (connection count) to highlight high-influence characters like Iron Man and Captain America.
+**Phase 3 - Character Relationship Graph:** Combined the crawler and API workflow into a character network. BFS traversal is constrained to a whitelist of known MCU characters, which keeps the graph focused on meaningful relationships. Nodes are scaled by degree to surface high-influence characters such as Iron Man and Captain America.
+
+**Recruiter takeaway:** This project shows backend utility automation, API integration, graph modeling, and data visualization skills in a single Python system.
 
 Key techniques: directed graph construction, BFS traversal with depth control, REST API consumption, node-degree-scaled graph visualization, pagination handling.

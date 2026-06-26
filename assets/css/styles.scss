@@ -65,6 +65,33 @@ footer { text-align:center; padding:2rem 0; color:#666 }
 }
 .cta-btn--outline:hover { background: #0a2540; color: #fff; }
 
+/* Recruiter Snapshot */
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.snapshot-item {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-left: 4px solid #0a2540;
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+}
+.snapshot-item strong {
+  display: block;
+  color: #0a2540;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+.snapshot-item span {
+  color: #333;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
@@ -92,6 +119,55 @@ footer { text-align:center; padding:2rem 0; color:#666 }
   color: #333;
 }
 .skill-category li { margin-bottom: 0.2rem; }
+
+/* Research */
+.research-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.research-item {
+  border-left: 4px solid #0a2540;
+  background: #f4f7fb;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+}
+.research-item h3 {
+  color: #0a2540;
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+}
+.research-item p {
+  color: #333;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* Current Focus */
+.current-focus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.current-focus div {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+}
+.current-focus strong {
+  color: #0a2540;
+  display: block;
+  font-size: 0.92rem;
+  margin-bottom: 0.35rem;
+}
+.current-focus span {
+  color: #333;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
 
 /* Project Grid */
 .project-grid {
@@ -176,3 +252,17 @@ footer { text-align:center; padding:2rem 0; color:#666 }
 }
 .project-links a:hover { background: #1a3a60; }
 .project-body { margin-top: 1.5rem; line-height: 1.8; }
+
+@media (max-width: 520px) {
+  .hero {
+    align-items: flex-start;
+  }
+  .hero-cta,
+  .contact-links {
+    flex-direction: column;
+  }
+  .cta-btn,
+  .contact-link {
+    text-align: center;
+  }
+}
